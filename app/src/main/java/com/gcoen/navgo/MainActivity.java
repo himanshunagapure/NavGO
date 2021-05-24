@@ -3,7 +3,6 @@ package com.gcoen.navgo;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.Html;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
@@ -11,7 +10,6 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.HorizontalScrollView;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.Spinner;
 import android.widget.Toast;
@@ -167,7 +165,7 @@ public class MainActivity extends AppCompatActivity {
                         Log.d(TAG, "shortest_path4: " + Arrays.toString(shortestPath));
                         Log.d(TAG, "shortest_tag2: " + childArray.get(j+1).getTag());
                         if (location_curr.length != 0 && location_dest.length != 0) {
-                            GraphicOverlay.Graphic textGraphic = new OcrGraphic(graphicOverlay, (float) location_curr[0], (float) location_curr[1], (float) location_dest[0], (float) location_dest[1]);
+                            GraphicOverlay.Graphic textGraphic = new Graphics(graphicOverlay, (float) location_curr[0], (float) location_curr[1], (float) location_dest[0], (float) location_dest[1]);
                             graphicOverlay.add(textGraphic);
                         }
                     }

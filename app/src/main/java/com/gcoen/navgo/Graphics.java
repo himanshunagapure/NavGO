@@ -5,7 +5,7 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 
-public class OcrGraphic extends GraphicOverlay.Graphic {
+public class Graphics extends GraphicOverlay.Graphic {
 
     private static final int TEXT_COLOR1 = Color.BLUE;
     private static Paint sRectPaint;
@@ -16,7 +16,7 @@ public class OcrGraphic extends GraphicOverlay.Graphic {
     float destImgYAxis;
 
     @SuppressLint("ResourceAsColor")
-    public OcrGraphic(GraphicOverlay overlay, float currImgXAxis, float currImgYAxis, float destImgXAxis, float destImgYAxis) {
+    public Graphics(GraphicOverlay overlay, float currImgXAxis, float currImgYAxis, float destImgXAxis, float destImgYAxis) {
         super(overlay);
 
         this.currImgXAxis=currImgXAxis;
