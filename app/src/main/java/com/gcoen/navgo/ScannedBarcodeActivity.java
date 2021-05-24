@@ -55,7 +55,7 @@ public class ScannedBarcodeActivity extends AppCompatActivity {
                 if (intentData.length() > 0) {
                     if (isLocation) {
 //                        startActivity(new Intent(ScannedBarcodeActivity.this, MainActivity.class).putExtra("current_location", intentData));
-                        startActivity(new Intent(ScannedBarcodeActivity.this, MainActivity2.class).putExtra("current_location", intentData));
+                        startActivity(new Intent(ScannedBarcodeActivity.this, MainActivity.class).putExtra("current_location", intentData));
                         finish();
                     }else {
                         startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(intentData)));
@@ -159,34 +159,22 @@ public class ScannedBarcodeActivity extends AppCompatActivity {
         super.onResume();
         initialiseDetectorsAndSources();
     }
-    private static final int CAMERA_PERMISSION_CODE = 100;
-    private static final int STORAGE_PERMISSION_CODE = 101;
-    
 
-    public void onRequestPermissionsResult(int requestCode,
-                                           @NonNull String[] permissions,
-                                           @NonNull int[] grantResults)
-    {
-        super.onRequestPermissionsResult(requestCode,
-                permissions,
-                grantResults);
 
-        if (requestCode == CAMERA_PERMISSION_CODE) {
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+
+        if (requestCode == REQUEST_CAMERA_PERMISSION) {
             if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                 Toast.makeText(ScannedBarcodeActivity.this, "Camera Permission Granted", Toast.LENGTH_SHORT) .show();
+
             }
             else {
                 Toast.makeText(ScannedBarcodeActivity.this, "Camera Permission Denied", Toast.LENGTH_SHORT) .show();
             }
         }
-        else if (requestCode == STORAGE_PERMISSION_CODE) {
-            if (grantResults.length > 0
-                    && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                Toast.makeText(ScannedBarcodeActivity.this, "Storage Permission Granted", Toast.LENGTH_SHORT).show();
-            } else {
-                Toast.makeText(ScannedBarcodeActivity.this, "Storage Permission Denied", Toast.LENGTH_SHORT).show();
-            }
-        }
+
     }
 }
 
