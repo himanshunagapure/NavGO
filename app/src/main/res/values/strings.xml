@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">NavGO</string>
+
+
+    <string name="main_gate">Main Gate - <font color="#ffffff00">38</font></string>
+    <string name="principal_cabin">Principal Cabin - <font color="white">Room 1</font></string>
+    <string name="chem_lab">Chemistry Lab-<font color="#FFFFFF">Room 3</font></string>
+    <string name="office">Office- <font color="#ffffff00">Room 4</font></string>
+
+</resources>
