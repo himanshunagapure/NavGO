@@ -10,8 +10,6 @@ import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 
-import java.io.IOException;
-
 
 public class DashboardActivity extends AppCompatActivity {
     private static final String TAG = "";
@@ -20,7 +18,7 @@ public class DashboardActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login_page);
+        setContentView(R.layout.activity_dashboard);
 
         buttonSCanQr = findViewById(R.id.btn_scan);
         buttonSCanQr.setOnClickListener(new View.OnClickListener() {
@@ -31,6 +29,7 @@ public class DashboardActivity extends AppCompatActivity {
                     if (ActivityCompat.checkSelfPermission(DashboardActivity.this, Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED) {
                         Intent intent = new Intent(DashboardActivity.this,ScannedBarcodeActivity.class);
                         startActivity(intent);
+                        finish();
                     } else {
                         ActivityCompat.requestPermissions(DashboardActivity.this, new
                                 String[]{Manifest.permission.CAMERA}, REQUEST_CAMERA_PERMISSION);

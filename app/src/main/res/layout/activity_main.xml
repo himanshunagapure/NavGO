@@ -18,16 +18,11 @@
             android:id="@+id/sp_destination_loc"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:background="#D62432" />
+            android:background="@color/orange_200"
+            android:spinnerMode="dialog"/>
 
     </LinearLayout>
 
-    <Button
-        android:id="@+id/btn_get_path"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Show Direction"
-        android:layout_below="@+id/lyt_main"/>
 
     <HorizontalScrollView
         android:layout_width="match_parent"
@@ -725,6 +720,15 @@
         app:srcCompat="@drawable/ic_barcode_scan"
         android:onClick="goToScanner" />
     <!--        android:onClick="goToScanner"-->
+
+    <Button
+        android:id="@+id/btn_get_path"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Show Direction"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="16dp"/>
 
 
 </RelativeLayout>

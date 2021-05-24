@@ -187,6 +187,7 @@ public class MainActivity extends AppCompatActivity {
     public void goToScanner(View view){
         Intent intent = new Intent(this,ScannedBarcodeActivity.class);
         startActivity(intent);
+        finish();
     }
     public void exitFromApp(View view){
         finish();

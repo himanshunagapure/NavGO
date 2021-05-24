@@ -7,7 +7,8 @@ import android.graphics.Paint;
 
 public class Graphics extends GraphicOverlay.Graphic {
 
-    private static final int TEXT_COLOR1 = Color.BLUE;
+//    private static final int TEXT_COLOR1 = Color.BLUE;
+    private static final int TEXT_COLOR1 = Color.rgb(48,154,211);
     private static Paint sRectPaint;
 
     float currImgXAxis;
