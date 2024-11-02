@@ -1,45 +1,96 @@
-**Edit a file, create a new file, and clone from Bitbucket in under 2 minutes**
+# NavGO
 
-When you're done, you can delete the content in this README and update the file with details for others getting started with your repository.
+**NavGO** is an indoor navigation application designed to help users navigate within closed spaces, such as buildings, where traditional GPS-based solutions like Google Maps do not work effectively. This app was developed as part of a college project and is currently optimized for use within the college campus premises. However, NavGO has been designed to be scalable, with the potential for application in other buildings or indoor environments in the future.
 
-*We recommend that you open this README in another tab as you perform the tasks below. You can [watch our video](https://youtu.be/0ocf7u76WSo) for a full demo of all the steps in this tutorial. Open the video in a new tab to avoid leaving Bitbucket.*
-
----
-
-## Edit a file
-
-You’ll start by editing this README file to learn how to edit a file in Bitbucket.
-
-1. Click **Source** on the left side.
-2. Click the README.md link from the list of files.
-3. Click the **Edit** button.
-4. Delete the following text: *Delete this line to make a change to the README from Bitbucket.*
-5. After making your change, click **Commit** and then **Commit** again in the dialog. The commit page will open and you’ll see the change you just made.
-6. Go back to the **Source** page.
+## Table of Contents
+1. [Features](#features)
+2. [How It Works](#how-it-works)
+3. [Demo Video](#demo-video)
+4. [Skills Used](#skills-used)
+5. [Installation](#installation)
+6. [Usage](#usage)
+7. [Technical Details](#technical-details)
+8. [Future Enhancements](#future-enhancements)
+9. [Contributing](#contributing)
+10. [License](#license)
 
 ---
 
-## Create a file
+## Features
 
-Next, you’ll add a new file to this repository.
+- **Offline Indoor Navigation**: Navigate within buildings without an internet connection.
+- **Optimized for College Premises**: Currently built and optimized for navigating inside our college campus.
+- **Shortest Path Mapping**: Automatically calculates and displays the shortest route between any two locations within the mapped area.
+- **Scalability**: Built with scalability in mind, so new maps can be added for other buildings or premises in the future.
 
-1. Click the **New file** button at the top of the **Source** page.
-2. Give the file a filename of **contributors.txt**.
-3. Enter your name in the empty file space.
-4. Click **Commit** and then **Commit** again in the dialog.
-5. Go back to the **Source** page.
+## How It Works
 
-Before you move on, go ahead and explore the repository. You've already seen the **Source** page, but check out the **Commits**, **Branches**, and **Settings** pages.
+NavGO uses predefined floor plans and mapping data to guide users inside the college campus without relying on GPS. It allows the user to select a starting point and an endpoint within the building. Using shortest-path algorithms, NavGO then displays the shortest possible path on the map, which the user can follow visually to reach their destination.
+
+## Demo Video
+
+To see **NavGO** in action, watch the demo video here:
+
+[Watch NavGO Demo](<https://youtu.be/g5nJ01_lgLQ?si=D8-IesddO3wMgNG6>)
+
+*This video provides a walkthrough of the app's features and how to navigate within the college campus using the application.*
+
+## Skills Used
+
+The development of **NavGO** involved applying a range of technical and analytical skills, which are detailed below:
+
+- **Android Development**: Core Android skills like activity management, fragment handling, and XML-based UI design were essential for building the app interface and navigation.
+- **Java/Kotlin Programming**: Used to implement backend functionality, UI interactivity, and logic for data handling within the application.
+- **Data Structures & Algorithms**: Graph theory, shortest-path algorithms (like Dijkstra’s or A*), and matrix representation were employed to calculate optimal routes.
+- **Map Design and Image Processing**: Designing a clear, interactive floor map and overlaying it within the app required skills in image processing and UI layout techniques.
+- **File Handling**: To store and load maps offline, efficient file handling for loading the campus map and accessing local resources was used.
+
+## Installation
+
+1. **Download the APK**: (Currently not available)
+2. **Install the App**:
+   - On your Android device, go to Settings > Security > Unknown Sources, and enable this option to allow installations from sources other than the Google Play Store.
+   - Open the downloaded APK file and tap **Install**.
+3. **Open NavGO**: Once installed, open the app from your home screen or app drawer.
+
+> **Note**: NavGO currently only works with the college campus map, which is preloaded with the app.
+
+## Usage
+
+1. **Launch the App**: Open NavGO on your Android device.
+2. **Select Your Map**: As of now, only the college campus map is available and loads by default.
+3. **Enter Source and Destination**:
+   - Type in the names of your starting location and your desired destination within the building.
+4. **View the Route**: The app will calculate and display the shortest path between the two points.
+5. **Navigate**: Follow the highlighted path on the map to reach your destination.
+
+## Technical Details
+
+- **Platform**: Android
+- **Language**: Java/Kotlin (choose based on the primary language used)
+- **Mapping and Pathfinding**:
+  - Uses a digital floor plan image of the college campus.
+  - Implements a shortest-path algorithm (such as Dijkstra's or A*) for route calculation.
+  - Visualizes the calculated path using overlays on the map image.
+- **Offline Capabilities**: All data is stored locally on the device, so no internet connection is required after installation.
+
+## Future Enhancements
+
+NavGO was initially developed as a prototype focused on the college premises, but there are several potential areas for expansion and improvement:
+
+1. **Dynamic Map Downloads**: Allow users to download maps of various locations and load them within the app.
+2. **Multiple Building Support**: Enable navigation across multiple buildings in a large campus or facility.
+3. **Enhanced User Interface**: Improve the visuals and interactivity of the map to provide a more immersive experience.
+4. **Location Tracking (Optional)**: Add support for indoor positioning techniques (e.g., WiFi triangulation, Bluetooth beacons) to provide real-time tracking.
+5. **Accessibility Improvements**: Add features to improve accessibility, such as voice guidance and larger font options.
+6. **Admin Panel for Map Management**: Allow authorized users to upload and configure maps for different locations within the app.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
-## Clone a repository
+**NavGO** - Indoor Navigation Made Easy
 
-Use these steps to clone from SourceTree, our client for using the repository command-line free. Cloning allows you to work on your files locally. If you don't yet have SourceTree, [download and install first](https://www.sourcetreeapp.com/). If you prefer to clone from the command line, see [Clone a repository](https://confluence.atlassian.com/x/4whODQ).
-
-1. You’ll see the clone button under the **Source** heading. Click that button.
-2. Now click **Check out in SourceTree**. You may need to create a SourceTree account or log in.
-3. When you see the **Clone New** dialog in SourceTree, update the destination path and name if you’d like to and then click **Clone**.
-4. Open the directory you just created to see your repository’s files.
-
-Now that you're more familiar with your Bitbucket repository, go ahead and add a new file locally. You can [push your change back to Bitbucket with SourceTree](https://confluence.atlassian.com/x/iqyBMg), or you can [add, commit,](https://confluence.atlassian.com/x/8QhODQ) and [push from the command line](https://confluence.atlassian.com/x/NQ0zDQ).
+This README is intended to guide both developers and users in understanding and using NavGO effectively. Feel free to reach out if you have questions or feedback!
